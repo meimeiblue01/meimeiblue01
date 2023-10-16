@@ -1,122 +1,74 @@
-# HIDEMYACC AUTOMATION - GUIDE TO USE (part 1) 
-## What is Hidemyacc Automation?
-Hidemyacc Automation is a new feature in Hidemyacc 3.0 that helps you save time, effort, and money on repetitive tasks such as Cookie Bot, creating accounts, web surfing, and more. 
+# How to create automation scripts with Javascript code commands
 
-You only need to drag and drop commands; no programming skills are required. Hidemyacc will automatically run scripts on selected profiles and perform repetitive tasks according to your requirements.
+Hidemyacc Automation is a time-saving solution that simplifies the execution of repetitive tasks, such as seeding, ordering, listing, warming up accounts, and more. 
 
-## Hidemyacc Automation Using Guide - Drag-and-Drop Commands
-To use the Automation feature effectively, you should be able to familiarize yourself with these commands. Here is a quick explanation of each command.
-### New tab
-Enter the Website URL you want the Script to open. Click on the "three dot" icon to edit the command. 
+You can make the most of its advanced capabilities to create batches of automation scripts effortlessly, just by dragging and dropping predefined commands.
 
-![new-tab-1](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/9f735f4f-1ed2-4b81-a3cd-bbabcf8cbd4a)
+But that's not all. You also have the option to infuse your automation with the power of JavaScript code commands, allowing you to blend the ease of drag-and-drop actions with the flexibility of coding. Wondering how this command works and how it can supercharge your automation tasks? Let's dive in and explore its potential.
 
-### Click element
-Use this command to make your profile click on a specific selector. You need to paste the selector you want to click on. You can use either a CSS Selector or an Xpath to obtain the selector.
+## What is a Javascript code command?
+JavaScript code empowers you to bring in your own custom code to execute the actions you desire. You can write this code in JSON or Puppeteer.
 
-![click-element-1](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/4187388a-1447-4193-9d00-5fa0906f06d1)
+This command combines the best of both worlds in automation script writing. It offers the convenience of dragging and dropping commands while also allowing you to swiftly code commands to your liking. This flexibility enables you to create multiple scripts that run just the way you want them to.
 
-To get the selector, follow these steps:
-- Access the website where you want to get the selector and right-click, then select "Inspect."
+## How to create automation scripts with Javascript code commands? 
+Hidemyacc is here to show you how to create an automation script using JavaScript commands to open any web page and extract its text. After that, the automation script will open a random website.
 
-![inspect](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/86308979-3506-413c-835a-a661a387babd)
-- Choose the element you want to click on.
-- Copy the selector or Xpath (depending on your selector preference).
+### Create an automation script
+First, you'll need to edit the URL in the **"New tab"** command. The system defaults to Hidemyacc's website, but you can change it to any website you like.
 
-![lấy selector](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/b7750e39-aca1-460f-a924-11f7177dace0)
-- Additionally, you can customize some parameters:
-  - Click rate: The success rate of clicking on the selector.
-  -  Random click: Randomly click on the selector.
-  -  Wait navigation: Wait for the webpage to finish loading.
+![new-tab-github](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/9c679ae7-108e-406c-b665-12f139a3e5a2)
 
-### Type
-Simulate the behavior of typing text into the selector you choose. You need to **paste the selector** you want to enter the text in and enter the text you want. Typing speed will be **randomized between 100ms and 300ms**.
+Next, add a **"Wait"** command. This is a command that pauses before executing the next step. You can customize the waiting time from X to Y seconds or leave it as the default 5 seconds.
 
-![type](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/cd327dc0-28c1-4fd7-b423-0422ee0e9d25)
-- You can input text in the following ways:
-- Type: Manually input text.
-- Choose from file: Only upload .txt files. You can choose to select text randomly by lines or from top to bottom (Top-down).
+![wait-github](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/faa48682-13b9-4c09-8ff2-b1e726f3b753)
 
-![text-choose from file](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/b06cdce5-3085-4b7f-aed3-4adc6720fa66)
-- You can also choose to:
-  - Random Google keywords: Input random Google keywords from the server.
-  - Random Amazon keywords: Input random keywords from the Amazon website.
-  - Random Etsy keywords: Input random keywords from the Etsy website.
-  - Random eBay keywords: Input random keywords from the eBay website.
-  - Random line of text: Randomly select text by lines.
+After that, drag and drop the **JavaScript command** and click on the three dots to edit the code. You can drag and drop a file containing your code or write your own code in the black area below.
 
-![texxt-gooogle](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/a7db7309-cf7c-4957-ba79-338b5c7b1340)
+![javascript-code-1-github](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/d425670d-5428-4874-9251-59d18dd3185e)
 
-### Wait
-Your profile will **wait** for the specific seconds you chose before continuing to the following action.
+Hidemyacc provides an example of code that changes the background color of a web page and extracts some text. Take a look at the code snippet below:
+```c
+document.querySelector('.homepage').style.background = "#39739d";
+return document.querySelector('h2').textContent;
+```
 
-![wait](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/2603b68e-4400-4464-a72f-352a313a0d49)
+**Note:** You'll need to click "Run in page" to execute the code in your open browser.
 
-### Wait navigation
-Wait for the page to load after navigation
+Next, add another **"Wait"** command and drag and drop **a second JavaScript command.** This code will open one of three random websites.
 
-![wait navigation](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/6aec1a8f-5e16-4a05-9b08-150c89533217)
+![javascript-code-2-github](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/a3f60298-6a17-45b5-b09b-87d759855e25)
 
-### Go back
-This command helps you **return** to the previous page.
+Here's an example of that code. Add a **"Wait"** command to allow the page to complete its actions before closing the automation script.
+```c
+const urls  = ['https://www.etsy.com/', 'https://www.google.com/', 'https://www.amazon.com/'];
+const index = parseInt(Math.random() * urls.length);
+const url = urls[index];
+await page.goto(url);
+```
 
-![go back](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/35e3b11f-5161-4de9-bb6d-7c14a7e886ad)
+Once you're done, click on the three dashes to arrange the commands. Please note that you only need to arrange them once.
 
-### Go forward
-Go forward to the next page of the tab.
+![arrange-github](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/509c4b87-d46a-4e4c-b0ec-e34c1a3c7d30)
 
-![go forward](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/048bbddf-9212-458a-8ad0-4cf3e5fe4e68)
+### Run test scripts
+After successfully creating the automation script, you click "Run test" to test your script. A new Hidemyacc profile will be created to run a test of this automation script.
 
-### SwipeUp
-**Scroll up** the web page in vertical with a specified number of pixels. You can randomize the pixel value and the number of scrolls or choose fixed parameters:
-- 500 pixels
-- Number scroll: 1 (scroll 500 pixels once)
-- Break Time (s): 1 (number of seconds to pause between each scroll).
+![run-test-github](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/b70442d3-6596-4047-99ea-ebbf595ef45c)
 
-![swipe up-random scroll](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/d313d5b4-64fa-4b60-8b15-e1709c8d78a8)
+After running the test, click **"Debug"** Hidemyacc will provide the extracted text as a string.
 
-![up-random](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/fc1ae6d1-ab50-4a51-9a95-410bb5655032)
+![debug-github](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/a245cd02-9029-48b3-abbc-4216daba1ab2)
 
-### SwipeDown
-**Scroll down** the web page in vertical with a specified number of pixels. You can randomize the pixel value and the number of scrolls or choose fixed parameters:
-- 500 pixels
-- Number scroll: 1 (scroll 500 pixels once)
-- Break Time (s): 1 (number of seconds to pause between each scroll).
+And there you have it! Hidemyacc has guided you through creating an automation script using JavaScript commands.
 
-![random-down](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/7140e142-66b3-4559-9f71-fb60444a7c8e)
+## Conclusion
+The JavaScript code command will provide you with more options when creating automation scripts on Hidemyacc.
 
-![fix-down](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/20b54cf1-d0d4-4e55-87e0-6d0f2bc483e9)
+👉 For more guidance on using other commands, check out the official Hidemyacc Automation tutorial playlist on our YouTube channel: [Hidemyacc Automation Playlist](https://www.youtube.com/watch?v=7ZeOfx70ino&list=PLBBtW4MP4Bf66mPrzu4TVyBiz0v2eygeG)
 
-### Close tab
-Close the currently open tab.
+👉 For more information, visit our website at [Hidemyacc - The best anti-detect browser](https://hidemyacc.com/)
 
-![close tab](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/30a553db-2e3d-4b65-b1a2-3b104e3b7e0d)
 
-### Reload tab
-Refresh the currently open webpage.
 
-![reload](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/34d7f4e6-a95e-4db0-8b19-16f45a43f372)
 
-### JavaScript code
-You can either upload a JavaScript file or write your own code.
-- Run in page: Execute commands that can be used in the web page's DevTools.
-
-![java](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/452e3e12-ec23-446a-a25b-b56962813752)
-
-### Keypress
-Simulate keyboard keypress actions. Supported keys include: Enter, Shift, Control, Alt, Meta, PageUp, PageDown, ArrowLeft, ArrowUp, Escape, Delete, Home, End, Space, and CapsLock. You can also add your desired keys.
-
-![keypress](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/14f55122-0920-4c7c-b441-a5402f56f500)
-
-### Take screenshot
-You use this command to take a screenshot of the current active tab. You can choose to take a screenshot of the current display (Page), capture the entire web page (Full page), or capture any element (An element).
-
-![take screenshot-1](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/632fe8af-473a-4f3a-9928-be85a0300182)
-
-If you don't name the file, the system will randomly generate a name for you. As for the file location, it will be set as the default to save in 'Downloads,' or you can choose a different desired location. 
-
-![take screenshot-2](https://github.com/meimeiblue01/meimeiblue01/assets/124659659/fa8f1286-f7ba-41fa-952c-3e4775e0e8cc)
-
-👉 Explore our tutorial videos for a comprehensive guide: [Hidemyacc Automation Playlist](https://www.youtube.com/watch?v=7ZeOfx70ino&list=PLBBtW4MP4Bf66mPrzu4TVyBiz0v2eygeG)
-
-👉 For more information please visit our website at: [Hidemyacc - The best anti-detect browser](https://hidemyacc.com/)
