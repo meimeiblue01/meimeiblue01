@@ -1,4 +1,4 @@
-# Record Automation - Create automation scripts without coding skills
+# Record Automation: Record Your Actions with Ease
 ## What is the Record Automation feature?
 Record is a feature on Hidemyacc Automation designed to streamline the process of creating automation scripts by recording your actual manual actions.
 
